@@ -1,4 +1,4 @@
-var Mylist = document.getElementsByTagName('li');
+var Mylist = document.getElementsByTagName('LI');
 var i;
 for(i = 0; i < Mylist.length; i++){
     var span = document.createElement("SPAN");
@@ -15,7 +15,7 @@ for(j = 0; j < close.length; j++){
         div.style.display = "none";
     }
 }
-var list = document.querySelector('');
+var list = document.querySelector('ol');
 list.addEventListener('click', function(ev){
     if(ev.target.tagName === 'LI') {
         ev.target.classList.toggle('checked');
