@@ -1,3 +1,9 @@
+var unames = document.getElementById("unam").value;
+var pnumber = document.getElementById("pnbr").value;
+var password = document.getElementById("pwd").value;
+
+function clicking(){
+
 const Pools = require('pg');
 // const pool = require('pg').pool;
 
@@ -11,11 +17,13 @@ const pool = new Pools.Pool({
 
 if(pool){
     console.log("connected");
-    pool.query('SELECT * FROM table2;', (err, res) =>{
+    pool.query("INSERT INTO table3 (username,phone_number,password) VALUES ('${unames.value}','Hi','Passwordd');", (err, res) =>{
         console.log(err,res);
         pool.end();
     });
 }
 else{
     console.log("not connected");
+}
+
 }
